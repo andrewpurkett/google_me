@@ -20,7 +20,7 @@ config :google_me, GoogleMe.Endpoint,
 
 # Do not print debug messages in production
 config :logger, level: :info
-config :google_me, GoogleMe.Endpoint,
+config :google_me, GoogleMe.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
   pool_size: 20,
