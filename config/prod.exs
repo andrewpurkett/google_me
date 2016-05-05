@@ -20,7 +20,11 @@ config :google_me, GoogleMe.Endpoint,
 
 # Do not print debug messages in production
 config :logger, level: :info
-
+config :google_me, GoogleMe.Endpoint,
+  adapter: Ecto.Adapters.Postgres,
+  url: System.get_env("DATABASE_URL"),
+  pool_size: 20,
+  ssl: true
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
