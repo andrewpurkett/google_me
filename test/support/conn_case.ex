@@ -20,10 +20,10 @@ defmodule GoogleMe.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      alias GoogleMe.Repo
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query, only: [from: 1, from: 2]
+      #alias GoogleMe.Repo
+      #import Ecto
+      #import Ecto.Changeset
+      #import Ecto.Query, only: [from: 1, from: 2]
 
       import GoogleMe.Router.Helpers
 
@@ -34,7 +34,7 @@ defmodule GoogleMe.ConnCase do
 
   setup tags do
     unless tags[:async] do
-      Ecto.Adapters.SQL.restart_test_transaction(GoogleMe.Repo, [])
+      #Ecto.Adapters.SQL.restart_test_transaction(GoogleMe.Repo, [])
     end
 
     {:ok, conn: Phoenix.ConnTest.conn()}
